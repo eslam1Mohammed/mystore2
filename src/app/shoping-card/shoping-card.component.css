@@ -1,0 +1,44 @@
+.main-contaner
+{
+    width: 80%;
+    margin: auto;
+    border: solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.in-main-contaner
+{
+    width: 50%;
+}
+.user-detalies
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.in-card-prodects-detalis
+{
+    display: flex;
+}
+.img-contaner img
+{
+    width: 135px;
+    height: 100px;
+}
+.submit-linked-1
+{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+   
+}
+.submit-link
+{
+    border: solid black;
+    background-color: blue;
+    text-decoration: none;
+}

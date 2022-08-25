@@ -1,0 +1,79 @@
+[
+    {
+        "prodectName":"headPhone",
+
+       "detales" :"cool gameing headphone and so pure sounds with less destortion ",
+
+        "imges":"assets/imges/headphone/headphone1jpg.jpg",
+        "price":50
+    },
+    
+    {
+        "prodectName":"headphone2",
+
+       "detales" :"another beautful kind of headphones that has cool new feature",
+
+        "imges":"assets/imges/headphone2/headphone3.jpg",
+        "price":1600
+    },
+    {
+        "prodectName":"headPhone3",
+
+       "detales" :"good looking & wireless headphone3  ",
+
+        "imges":"assets/imges/headphone2/headphone4.jpg",
+        "price":1300
+    },
+    {
+        "prodectName":"laptop",
+
+       "detales" :"mac laptop is good laptop for all users",
+
+        "imges":"assets/imges/laptop/laptop1.jpg",
+        "price":3000
+    },
+    {
+        "prodectName":"phone",
+
+       "detales" :"smart phone its not just for call people but also is great for make vidios and imges with great camera",
+
+        "imges":"assets/imges/phone/phon1.jpg",
+        "price":500
+    }
+    ,
+    {
+        "prodectName":"sup sound",
+
+       "detales" :"sup sound with cool loud sound and pure sound",
+
+        "imges":"assets/imges/sup/sup1.jpg",
+        "price":600
+    }
+    ,
+    {
+        "prodectName":"smart TV",
+
+       "detales" :"smart tv with pure televegen",
+
+        "imges":"assets/imges/tv/tv.jpg",
+        "price":600
+    }
+    ,
+    {
+        "prodectName":"watch",
+
+       "detales" :"good looking and cool watch with critical time ",
+
+        "imges":"assets/imges/watch/watch1.jpg",
+        "price":700
+    }
+    ,
+    {
+        "prodectName":"drons",
+
+       "detales" :"that kind of dropns fly long distance and so fast",
+
+        "imges":"assets/imges/droon/dron1.jpg",
+        "price":1500
+    }
+]

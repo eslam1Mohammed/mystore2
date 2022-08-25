@@ -1,0 +1,85 @@
+.main
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 80%;
+}
+.main-contaner
+{
+    display: grid;
+    grid-template-columns:0.5fr 0.5fr 0.5fr;
+    gap: 2% 2%;
+}
+.contaner
+{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.imge-contaner
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prodact-contaner
+{
+    border: solid blue 5px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 400px;
+}
+.prodact-contaner img
+{
+    cursor: pointer;
+    padding:0;
+    margin: 0;
+    width: 200px;
+    height: 200px;
+}
+.prodect-Name
+{
+    text-align: center;
+}
+.prodect-Price
+{
+    text-align: center;
+}
+.prodects-counter
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prodect-number
+{
+    width: 60px;
+}
+.botton-contaner
+{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botton-contaner button
+{
+    cursor: pointer;
+    height: 35px;
+    background-color: rgb(25, 67, 233);
+}
+.ss
+{
+    cursor: pointer;
+}
