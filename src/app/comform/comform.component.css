@@ -1,0 +1,45 @@
+.prodects-counter
+{
+    margin-top: 70px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.in-prodects-counter
+{
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    margin-right: auto;
+}
+.success-contaner
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.success-contaner img
+{
+    position: relative;
+    width: 50px;
+    height: 60px;
+}
+.succes
+{
+    color: aqua;
+    text-align: center;
+}
+.in-prodects-counter p
+{
+    text-align: center;
+}
+.button1
+{
+    display: flex;
+    padding: 5px 10px;
+    background-color: blue;
+    cursor: pointer;
+}

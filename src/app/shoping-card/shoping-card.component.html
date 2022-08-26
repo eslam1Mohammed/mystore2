@@ -56,7 +56,7 @@
               <label for="input"> email::</label>
           </div>
           <div>
-              <input type="email" name=""
+              <input type="email" name="" required
               formControlName="email">
               <div *ngIf="f['email'].touched && f['email'].invalid" class="alart">
                 <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
@@ -74,7 +74,7 @@
             <div *ngIf="f['password'].errors && f['password'].errors['minlength']">creaded card number should be 6 numbers.</div>
         </div>
         <div class="submit-linked-1">
-          <a class="submit-link" (click)="submit()" routerLink="/comform/">submit</a>
+          <a class="submit-link" (click)="submit(grandtotale,f)" routerLink="/comform/">submit</a>
         </div>
        <br>
        <div class="submit-linked-1" >

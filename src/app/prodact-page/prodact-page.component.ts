@@ -21,7 +21,7 @@ export class ProdactPageComponent {
         this.prodectpost=prodectpost;
         this.prodectpost.forEach((a:any)=>
         {
-          Object.assign(a,{total:a.price,quantity:this.onSelected(ProdactPageComponent.q)})
+          Object.assign(a,{total:a.price,quantity:1})
         })
       })
   } 

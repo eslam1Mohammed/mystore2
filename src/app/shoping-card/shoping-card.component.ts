@@ -29,12 +29,17 @@ export class ShopingCardComponent implements OnInit {
     body: new FormControl('', Validators.required)
   });
   
-  get f(){
+  get f()
+  {
     return this.form.controls;
   }
-  
-  submit(){
-    console.log(this.form.value);
+
+  submit(grand:number,f:any){
+    alert("prodect items added to shop card")
+    this.form=f;
+    grand=this.grandtotale;
+    f+=grand;
+    return f;
   }
 
 }

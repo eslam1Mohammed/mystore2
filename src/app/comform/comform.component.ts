@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CardService } from '../services/card.service';
 
 @Component({
   selector: 'comform',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComformComponent implements OnInit {
 
-  constructor() { }
+  public product:any;
+
+  constructor(private card:CardService) { 
+    this.card.getprodecs().subscribe(res=>
+      {
+        this.product=res;
+      })
+  }
 
   ngOnInit(): void {
   }
