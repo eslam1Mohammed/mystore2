@@ -21,7 +21,7 @@
   </div>
 <div class="user-detalies">
   <div class="login-box">
-      <form [formGroup]="form" >
+      <form [formGroup]="form" (ngSubmit)="submitForm()" >
         <div class="user-box">
           <div>
               <label for="input">full Name::</label>
@@ -42,18 +42,18 @@
           </div>
 
           <div>
-              <input formControlName="name2" 
+              <input formControlName="address" 
           id="name" 
           type="text" type="text" name="" required>
-          <div *ngIf="f['name2'].touched && f['name2'].invalid" class="alart">
-            <div *ngIf="f['name2'].errors && f['name2'].errors['required']">address is required.</div>
-            <div *ngIf="f['name2'].errors && f['name2'].errors['minlength']">address should be 3 character.</div>
+          <div *ngIf="f['address'].touched && f['address'].invalid" class="alart">
+            <div *ngIf="f['address'].errors && f['address'].errors['required']">address is required.</div>
+            <div *ngIf="f['address'].errors && f['address'].errors['minlength']">address should be 3 character.</div>
           </div>
         </div>
         </div>
         <div class="user-box">
           <div>
-              <label for="input"> email::</label>
+              <label for="input"> email:</label>
           </div>
           <div>
               <input type="email" name="" required
@@ -74,7 +74,7 @@
             <div *ngIf="f['password'].errors && f['password'].errors['minlength']">creaded card number should be 6 numbers.</div>
         </div>
         <div class="submit-linked-1">
-          <a class="submit-link" (click)="submit(grandtotale,f)" routerLink="/comform/">submit</a>
+          <input formControlName="body" routerLink="/comform" class="submit-link" type="submit"  >
         </div>
        <br>
        <div class="submit-linked-1" >

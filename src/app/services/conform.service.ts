@@ -1,35 +1,27 @@
+
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
 export class ConformService {
-  public form:any=[];
-  public conformlist=new BehaviorSubject<any>([]);
-  constructor() { }
-  setprodecs(form:any)
-  {
-    this.form.push(...form)
-    this.conformlist.next(form)
+  public user:any=[];
+  public carddetales=new BehaviorSubject<any>([]);
+  constructor() {
+   
   }
-  getform()
+  getprodecs()
   {
-    return this.conformlist.asObservable();
+    return this.carddetales.asObservable();
   }
-  addtoform(form:any)
+  addtocard(prodect:any)
   {
-    this.form.push(...form)
-    this.conformlist.next(form)
-    this.gettotaleprice()
+    this.user.push(prodect)
+    this.carddetales.next(this.user)
   }
-  gettotaleprice():number
+  setprodecs(prodect:any)
   {
-    let totle=0
-    this.form.
-    map((a:any)=>{
-      totle+=a.total
-    })
-    return totle;
+    this.user.push(...prodect)
+    this.carddetales.next(prodect)
   }
   }

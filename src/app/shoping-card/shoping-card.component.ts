@@ -1,5 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormGroupName } from '@angular/forms';
 import { CardService } from '../services/card.service';
 import { ConformService } from '../services/conform.service';
 @Component({
@@ -7,40 +8,39 @@ import { ConformService } from '../services/conform.service';
   templateUrl: './shoping-card.component.html',
   styleUrls: ['./shoping-card.component.css']
 })
-export class ShopingCardComponent implements OnInit {
+export class ShopingCardComponent implements OnInit 
+{
   public product:any;
   public grandtotale!:number;
   public quantitynumber!:number;
-  constructor(private card:CardService) 
+  router: any;
+  constructor(private card:CardService,private user:ConformService) 
   {
     this.card.getprodecs().subscribe(res=>
       {
         this.product=res;
         this.grandtotale=this.card.gettotaleprice();
-        this.quantitynumber+=this.grandtotale*this.card.getquantity();
+        this.quantitynumber=this.card.getquantity();
 
       })
-      // this.conform.addtoform(this.f);
-      // this.grandtotale=this.conform.gettotaleprice();
    }
   ngOnInit(): void {
   }
   form= new FormGroup({
     name1: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    name2:new FormControl('', [Validators.required, Validators.minLength(3)]),
+    address:new FormControl('', [Validators.required, Validators.minLength(15)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password:new FormControl('',[Validators.required ,Validators.minLength(6)]),
-    body: new FormControl('', Validators.required)
+    qq:new FormControl(this.card.gettotaleprice()),
+    body: new FormControl("submit", Validators.required)
   });
   
   get f()
   {
     return this.form.controls;
   }
-  submit(grand:number,f:any){
-    alert("prodect items added to shop card");
-    f=this.form;
-    grand=this.grandtotale
+  submitForm()
+  {
+    console.log(this.form.value);
   }
-
 }
