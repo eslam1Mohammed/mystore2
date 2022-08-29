@@ -27,7 +27,7 @@
               <label for="input">full Name::</label>
           </div>
           <div>
-              <input formControlName="name1"
+              <input [(ngModel)]="name" formControlName="name1"
               id="name" 
               type="text" type="text" name="" required>
               <div *ngIf="f['name1'].touched && f['name1'].invalid" class="alart">
@@ -74,7 +74,7 @@
             <div *ngIf="f['password'].errors && f['password'].errors['minlength']">creaded card number should be 6 numbers.</div>
         </div>
         <div class="submit-linked-1">
-          <input formControlName="body" routerLink="/comform" class="submit-link" type="submit"  >
+          <input formControlName="body" class="submit-link" type="submit"  >
         </div>
        <br>
        <div class="submit-linked-1" >

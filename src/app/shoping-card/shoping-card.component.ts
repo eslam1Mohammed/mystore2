@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormGroupName } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CardService } from '../services/card.service';
 import { ConformService } from '../services/conform.service';
 @Component({
@@ -13,9 +14,10 @@ export class ShopingCardComponent implements OnInit
   public product:any;
   public grandtotale!:number;
   public quantitynumber!:number;
-  router: any;
-  constructor(private card:CardService,private user:ConformService) 
+  name:any;
+  constructor(private card:CardService,private user:ConformService,private router:Router) 
   {
+    
     this.card.getprodecs().subscribe(res=>
       {
         this.product=res;
@@ -41,6 +43,7 @@ export class ShopingCardComponent implements OnInit
   }
   submitForm()
   {
-    console.log(this.form.value);
+    alert(`ok`)
+    this.router.navigate(['/comform'],{queryParams:{date:this.name,Number:this.grandtotale}})
   }
 }
