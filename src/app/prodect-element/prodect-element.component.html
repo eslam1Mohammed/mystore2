@@ -4,12 +4,13 @@
       <div class="contaner">
         <div class="prodact-contaner">
           <div routerLink="/prodect-element"class="imge-contaner">
-            <img src="" alt="" title="">
+            <img src="" alt="" title="prodectName">
           </div>
+          <p class="prodect-Name">{{name}}</p>
           <p class="prodect-Name"></p>
           <div class="prodect-Price"></div>
           <div class="prodects-counter">
-            <select class="prodect-number" name="prodect number">
+            <select class="prodect-number" name="{{name}}">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -22,7 +23,7 @@
           </div>
           <div class="botton-contaner">
             <button>
-              <span class="ss">
+              <span class="ss" routerLink="/">
                 add to card
               </span>
             </button>

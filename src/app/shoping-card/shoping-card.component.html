@@ -8,10 +8,24 @@
               </div>
               <div class="in-card-prodects-detalis-prodect">
                   <p>name of proedcts:{{s.prodectName}} </p>
-                  <p>the price is:{{s.price}}</p>
-                  <p> the quanitity is:{{quantitynumber}}</p>
+                  <p >the price is:{{s.price}}</p>
+                  <label for="select">Amount::</label>
+                  <select  name="prodect number">
+                    <option default value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                    <option value=6>6</option>
+                    <option value=7>7</option>
+                    <option value=8>8</option>
+                </select>
               </div>
-          </div>      
+              <div (click)="remove(s)" title="remove item" class="remove">
+                x
+              </div>
+          </div>
+                
       </div>
   </div>
   <h2>the total is:{{grandtotale}}$</h2>
@@ -67,7 +81,7 @@
         <div class="user-box">
           <label for="input"> creaded card number</label>
           <div>
-              <input formControlName="password" type="password" name="" required>
+              <input formControlName="password" type="password" name="" required maxlength="6">
               <div *ngIf="f['password'].touched && f['password'].invalid" class="alart">
           </div>
             <div *ngIf="f['password'].errors && f['password'].errors['required']">creaded card number is required.</div>

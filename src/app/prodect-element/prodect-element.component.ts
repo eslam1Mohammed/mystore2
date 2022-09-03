@@ -1,18 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { CardService } from '../services/card.service';
 
+import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'prodect-element',
   templateUrl: './prodect-element.component.html',
   styleUrls: ['./prodect-element.component.css']
 })
 export class ProdectElementComponent {
-  public product:any=[];
-  constructor(private card:CardService) 
+
+  id:any;
+  imge:any
+  prise:any
+  name:any
+  detales:any
+  constructor(private router:ActivatedRoute) 
   {
-    this.card.getprodecs().subscribe(res=>
-      {
-        this.product=res;
-      })
-   }
+    this.name=this.router.snapshot.paramMap.get("prodect-Name")
+    console.log(this.name)
+  }
+  ngOnInit(): void 
+  {
+   
+  }
+
 }

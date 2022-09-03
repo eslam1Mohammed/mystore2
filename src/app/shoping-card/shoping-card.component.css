@@ -18,9 +18,24 @@
     justify-content: center;
     width: 50%;
 }
+.card-prodects-detalis
+{
+    display: flex;
+    align-items: center;
+}
 .in-card-prodects-detalis
 {
     display: flex;
+}
+.remove
+{
+    display: flex;
+    align-items: center;
+    color: red;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    border: solid red;
 }
 .img-contaner img
 {

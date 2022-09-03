@@ -8,8 +8,8 @@ import { DataServiceService } from './data-service.service';
 })
 export class NewProdectService extends DataServiceService<NewProudect>
  {
-
-  constructor(http:HttpClient) {
+  constructor( http:HttpClient) {
     super('/assets/prodects.json',http)
    }
+
 }

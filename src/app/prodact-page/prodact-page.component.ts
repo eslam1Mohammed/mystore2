@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { NgModel, ReactiveFormsModule,FormsModule,FormGroup, FormControl, Validators} from '@angular/forms';
 import { NewProdectService } from '../services/new-prodect.service';
 import { NewProudect } from '../model/newprodects';
 import { CardService } from '../services/card.service';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'prodact-page',
   templateUrl: './prodact-page.component.html',
   styleUrls: ['./prodact-page.component.css']
 })
 export class ProdactPageComponent {
-
   prodectpost:NewProudect[]=[];
   corporation:any;
-  static q:number;
-  constructor(private http:NewProdectService,private addProdecs:CardService) 
+  q!:number;
+  prodectName!:string;
+  imges!:string;
+  price!:number;
+  detales!:string;
+  constructor(private http:NewProdectService,private addProdecs:CardService,private router:Router) 
   {
     this.http.get().subscribe(prodectpost=>
       {
@@ -31,17 +33,10 @@ export class ProdactPageComponent {
     alert("prodect items added to shop card")
     console.log(item);
     this.addProdecs.addtocard(item);
+    // this.router.navigate(['shoping-card'],{queryParams:{Number:this.q}});
   }
-  addprodect2(item:any)
+  addprodect2()
   {
-    alert("prodect items added to prodect element")
-    console.log(item);
-    this.addProdecs.addtocard(item);
-  }
-  onSelected(sq:any)
-  {
-   console.log(sq.value)
-   sq.value=ProdactPageComponent.q;
-   return ProdactPageComponent.q
+    this.router.navigate(['/prodect-element'],{queryParams:{data:this.prodectName,ss:this.imges,ss2:this.detales,ss3:this.price}})
   }
 }

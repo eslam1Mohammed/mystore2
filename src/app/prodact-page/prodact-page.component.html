@@ -3,13 +3,13 @@
   <div class="main-contaner">
     <div *ngFor="let s of prodectpost" class="contaner">
       <div class="prodact-contaner">
-        <div (click)="addprodect2(s)" routerLink="/prodect-element"class="imge-contaner">
+        <div routerLink="/prodect-element/:{{s.prodectName}}" class="imge-contaner">
           <img src="{{s.imges}}" alt="{{s.imges}}" title="{{s.prodectName}}">
         </div>
         <p class="prodect-Name">{{s.prodectName}}</p>
         <div class="prodect-Price">{{s.price}}</div>
         <div class="prodects-counter">
-          <select #sq (change)="onSelected(sq.value)" name="prodect number">
+          <select name="prodect number">
           <option default value=1>1</option>
           <option value=2>2</option>
           <option value=3>3</option>
@@ -28,7 +28,6 @@
           </button>
         </div>
       </div>
-    
     </div>
   </div>
 </div>

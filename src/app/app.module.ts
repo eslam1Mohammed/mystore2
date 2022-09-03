@@ -20,7 +20,7 @@ const appRout :Routes=
   {path:"",redirectTo:"prodact-page",pathMatch:"full"},
   {path:"prodact-page",component:ProdactPageComponent},
   {path:"shoping-card",component:ShopingCardComponent},
-  {path:"prodect-element",component:ProdectElementComponent},
+  {path:"prodect-element/:prodectName",component:ProdectElementComponent},
   {path:"comform",component:ComformComponent}
 ]
 

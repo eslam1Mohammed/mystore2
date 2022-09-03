@@ -22,8 +22,7 @@ export class CardService {
   {
     this.prodectlist.push(prodect)
     this.cardslist.next(this.prodectlist)
-    this.gettotaleprice()
-    this.getquantity();
+    this.gettotaleprice();
   }
   gettotaleprice():number
   {

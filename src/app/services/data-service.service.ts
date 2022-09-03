@@ -11,6 +11,10 @@ export class DataServiceService<a> {
   {
    return this.http.get<a[]>(this.url);
   }
+  getid(id:any)
+  {
+   return this.http.get<a[]>(this.url+"/"+id);
+  }
   post(resourse:a)
   {
     return this.http.post<a[]>(this.url,JSON.stringify(resourse));
