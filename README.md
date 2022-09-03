@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+hello mystore2 project is a simulation of an e-commerce website that provides some products that users can choose from
+if the user press the image of the product that gives him all product details and the user can add this item from details page to shopping cart page 
+user can  add products from the product page to the shopping cart page and  then it contains the products list and the total calculation  of the product list 
+user fills the form and press to submit button
